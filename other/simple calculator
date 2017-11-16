@@ -1,0 +1,59 @@
+print('What Do You Want...?')
+want=int(input('1.ADD\n2.SUB\n3.MUL\n4.Div\n5.NPR\n6.NCR\nPress Your Choice:'))
+if (want > 6):
+    print('Wrong input....!')
+elif(want <= 4):
+    aa=int(input('Enter Value No 1='))
+    bb=int(input('Enter Value no 2='))
+elif(want >= 5 and want <= 6):
+    n=int(input("Enter n:"))
+    r=int(input("Enter r:"))
+#.....................ADD.............................
+def add(ans):
+    print('%d + %d =' %(aa,bb),ans)
+    return
+#.....................SUB.............................
+def sub(ans):           
+    print('%d - %d =' %(aa,bb),ans)
+    return
+#.....................MUL.............................
+def mul(ans):          
+    print('%d * %d =' %(aa,bb),ans)
+    return
+#.....................DIV.............................
+def div(ans):         
+    print('%d / %d =' %(aa,bb),ans)
+    return
+#.....................Factorial.......................
+def fact(k):        
+    temp=1
+    if(k == 0):
+        return 1
+    else:
+        while(k != 0):
+            temp*=k
+            k-=1
+        return temp
+#...................................................
+if (want == 1):
+    add(aa+bb)  # Add Function Call
+elif (want == 2):
+    sub(aa-bb)  # Sub Function Call
+elif (want == 3):
+    mul(aa*bb)  # Mul Function Call
+elif (want == 4):
+    div(aa//bb) # Div Function Call
+elif (want ==5): #factorial Function Call for NPR
+    if (n<r):
+        print('Syntex Error..!\nBecause,\nr=%d is greater then n=%d'%(r,n))
+    else:
+        ans=fact(n)//(fact(n-r))
+        print('%d P %d='%(n,r),ans)
+elif(want == 6):  #factorial Function Call for NCR
+    if (n<r):
+        print('Syntex Error..!\nBecause,\nr=%d is greater then n=%d'%(r,n))
+    else:
+        ans=fact(n)//(fact(r)*fact(n-r))
+        print('%d C %d='%(n,r),ans)
+    
+
